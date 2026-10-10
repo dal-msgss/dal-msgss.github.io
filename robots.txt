@@ -1,5 +1,3 @@
-# This file tells search engines and bots what they are allowed to see on your site.
-
-# This is the default rule, which allows search engines to crawl your site (recommended).
+# Allow all search engines and bots to crawl the whole site.
 User-agent: *
 Allow: /
