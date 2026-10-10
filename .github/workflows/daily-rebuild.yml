@@ -1,0 +1,20 @@
+name: Daily site rebuild
+
+# The seminar page sorts talks into "Upcoming" and "Past" when the site is
+# built. GitHub Pages only rebuilds when something is pushed, so this asks
+# Pages to rebuild every night so finished talks move to "Past" on their own.
+on:
+  schedule:
+    - cron: "30 4 * * *"   # 04:30 UTC = 00:30/01:30 in Halifax
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}

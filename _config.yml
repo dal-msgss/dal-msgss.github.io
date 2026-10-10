@@ -1,0 +1,18 @@
+# Jekyll settings for the MSGSS site (GitHub Pages builds the site from these).
+title: MSGSS
+timezone: America/Halifax
+
+# Seminar talks: one Markdown file per talk in _talks/.
+collections:
+  talks:
+    output: true
+    permalink: /seminar/talks/:name.html
+
+# Publish talks even when their date is in the future (upcoming talks).
+future: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
