@@ -7,6 +7,9 @@ collections:
   talks:
     output: true
     permalink: /seminar/talks/:name.html
+  # Executive: one file per year in _executive/ (not published as pages).
+  executive:
+    output: false
 
 # Publish talks even when their date is in the future (upcoming talks).
 future: true

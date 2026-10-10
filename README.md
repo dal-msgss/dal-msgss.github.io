@@ -18,9 +18,30 @@ date: 2026-10-15
 The abstract, in Markdown. Leave a blank line between paragraphs.
 ```
 
-Seminar details (room, time, contact, blurb) are in `_data/seminar.yml`.
+Seminar details (room, time, contact, blurb) are written directly in `seminar/index.html`.
 
 Push to `main` and GitHub Pages rebuilds the site. The seminar page splits talks into upcoming and past using the build date; `.github/workflows/daily-rebuild.yml` triggers a rebuild every night
 so they stay current.
 
 To preview locally: `bundle exec jekyll serve` (with the `github-pages` gem).
+
+## Executive page
+
+Each year's council is one file in `_executive/`, named like `2026-27.md`:
+
+```markdown
+---
+year: "2026/27"
+President: Jane Doe
+Vice-President External: ...
+Vice-President Internal: ...
+PhD Mathematics: ...
+PhD Statistics: ...
+MSc Mathematics: ...
+MSc Statistics: Vacant
+---
+```
+
+The newest year is shown as the current executive; older years are listed under
+"Past executives". The role descriptions and layout are in `executive.html`.
+A role left out of a year's file shows as "Vacant".

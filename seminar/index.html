@@ -3,14 +3,13 @@ layout: default
 title: Seminar
 full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 ---
-{% assign info = site.data.seminar %}
 {% assign today = site.time | date: "%Y-%m-%d" %}
 {% assign talks = site.talks | sort: "date" %}
-<h1>{{ info.name }}</h1>
-<p>{{ info.blurb }}</p>
-<p><b>Location:</b> {{ info.location }}<br>
-<b>Time:</b> {{ info.time }}<br>
-<b>Want to give a presentation?</b> Email <a href="mailto:{{ info.contact }}">{{ info.contact }}</a></p>
+<h1>Dalhousie Mathematics &amp; Statistics Graduate Seminar</h1>
+<p>Our weekly grad seminar is a chance for graduate students to share their research in an informal, friendly setting. Everyone is welcome to come listen, and new speakers are always encouraged.</p>
+<p><b>Location:</b> Chase Building, Room 227<br>
+<b>Time:</b> Thursdays, 4:00-5:00 PM<br>
+<b>Want to give a presentation?</b> Email <a href="mailto:msgss@dal.ca">msgss@dal.ca</a></p>
 
 <h2>Upcoming</h2>
 {% assign any_upcoming = false %}
@@ -21,7 +20,7 @@ full_title: Dalhousie Mathematics & Statistics Graduate Seminar
   {{ talk.content }}
 </article>
 {% endif %}{% endfor %}
-{% unless any_upcoming %}<p>No talks scheduled yet. Check back soon, or <a href="mailto:{{ info.contact }}">volunteer to speak</a>!</p>{% endunless %}
+{% unless any_upcoming %}<p>No talks scheduled yet. Check back soon, or <a href="mailto:msgss@dal.ca">volunteer to speak</a>!</p>{% endunless %}
 
 <h2>Past talks</h2>
 {% assign past = talks | reverse %}{% assign year = "" %}
