@@ -14,6 +14,15 @@ collections:
 # Publish talks even when their date is in the future (upcoming talks).
 future: true
 
+# Every page uses the site layout (header, nav, footer) unless it says otherwise,
+# so a Markdown page only needs a title in its front matter.
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
 exclude:
   - README.md
   - Gemfile

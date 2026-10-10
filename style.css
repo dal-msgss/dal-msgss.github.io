@@ -91,3 +91,27 @@ article h3 { margin-bottom: 0.2rem; }
 .talk-list { list-style: none; padding-left: 0; }
 .talk-list li { margin-bottom: 0.9rem; }
 .talk-list .meta { font-size: 1rem; }
+
+/* Extra styles for pages written in Markdown */
+main h1 + h2 { margin-top: 1.5rem; }
+main h4 { margin-bottom: 0.3rem; }
+main a { overflow-wrap: anywhere; }
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.2rem 1.2rem;
+  border-left: 4px solid var(--beige);
+  color: var(--olive);
+}
+code {
+  font-size: 0.9em;
+  background: #F1EBDD;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+pre { background: #F1EBDD; padding: 1rem; overflow-x: auto; }
+pre code { padding: 0; background: none; }
+hr { border: 0; border-top: 1px solid var(--beige); margin: 2rem 0; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; margin: 1rem 0; }
+th, td { border-bottom: 1px solid var(--beige); padding: 0.4rem 0.8rem; text-align: left; }
+th { color: var(--olive); }

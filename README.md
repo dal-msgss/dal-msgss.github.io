@@ -45,3 +45,22 @@ MSc Statistics: Vacant
 The newest year is shown as the current executive; older years are listed under
 "Past executives". The role descriptions and layout are in `executive.html`.
 A role left out of a year's file shows as "Vacant".
+
+## Markdown pages
+
+Any `.md` file in the site becomes a page with the site's header, nav and
+footer. `welcome.md` is published at `/welcome.html`; a file at
+`resources/housing.md` would be at `/resources/housing.html`. Start the file
+with a title:
+
+```markdown
+---
+title: Welcome Package
+---
+# MSGSS Welcome Package
+
+Normal Markdown from here on.
+```
+
+The `title` shows in the browser tab. To add the page to the nav bar, add a
+link in `_layouts/default.html`.
