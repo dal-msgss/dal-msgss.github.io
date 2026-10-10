@@ -1,3 +1,5 @@
 # Allow all search engines and bots to crawl the whole site.
 User-agent: *
 Allow: /
+
+Sitemap: https://msgss-dal.github.io/sitemap.xml

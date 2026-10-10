@@ -40,6 +40,8 @@ The abstract, in Markdown. Leave a blank line between paragraphs.
 
 The seminar room and time are in `_data/society.yml`; the blurb is in `seminar/index.html`.
 
+If the title isn't known yet, use `TBA`; it is shown as "Talk by Jane Doe".
+
 The seminar page lists every talk, newest first, grouped by academic year
 (July to June, labelled like 2025/26).
 

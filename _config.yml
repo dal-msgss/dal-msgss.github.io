@@ -31,6 +31,10 @@ defaults:
     values:
       layout: talk
 
+# Builds /sitemap.xml so search engines find every page and talk.
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - README.md
   - Gemfile

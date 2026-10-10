@@ -1,0 +1,7 @@
+{%- comment -%}
+  A talk's title. A title of "TBA" is shown as "Talk by <speaker>" instead.
+  Use: {% include talk-title.html talk=talk %}
+{%- endcomment -%}
+{%- assign t = include.talk -%}
+{%- assign tba = t.title | strip | downcase -%}
+{%- if tba == "tba" -%}Talk by {{ t.speaker }}{%- else -%}{{ t.title }}{%- endif -%}
