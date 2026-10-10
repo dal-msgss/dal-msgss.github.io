@@ -10,8 +10,7 @@ GitHub Pages rebuilds the site within a few minutes.
 - [ ] Add the new year's file to `_executive/` (see "Executive page" below).
 - [ ] Update the seminar room and time in `_data/society.yml`.
 - [ ] If the bylaws or constitution were amended, replace `docs/bylaws.pdf` and
-      `docs/constitution.pdf` (keep those file names so links don't break) and
-      update the "Last amended" line in `docs/index.md`.
+      `docs/constitution.pdf` (keep those file names so links don't break).
 - [ ] Make sure this checklist is in the society's transition notes for next year.
 
 ## Where things are
