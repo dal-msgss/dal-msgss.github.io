@@ -22,6 +22,11 @@ defaults:
       type: pages
     values:
       layout: default
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
 
 exclude:
   - README.md
