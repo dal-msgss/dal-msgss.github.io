@@ -7,11 +7,15 @@ collections:
   talks:
     output: true
     permalink: /seminar/talks/:name.html
+  # Events: one Markdown file per event in _events/.
+  events:
+    output: true
+    permalink: /events/:name.html
   # Executive: one file per year in _executive/ (not published as pages).
   executive:
     output: false
 
-# Publish talks even when their date is in the future (upcoming talks).
+# Publish talks and events even when their date is in the future.
 future: true
 
 # Every page uses the site layout (header, nav, footer) unless it says otherwise,

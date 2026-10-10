@@ -11,16 +11,19 @@ full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 <b>Time:</b> Thursdays, 4:00-5:00 PM<br>
 <b>Want to give a presentation?</b> Email <a href="mailto:msgss@dal.ca">msgss@dal.ca</a></p>
 
-<h2>Upcoming</h2>
+{% comment %} The Upcoming section only appears when a talk is scheduled. {% endcomment %}
 {% assign any_upcoming = false %}
-{% for talk in talks %}{% assign d = talk.date | date: "%Y-%m-%d" %}{% if d >= today %}{% assign any_upcoming = true %}
+{% for talk in talks %}{% assign d = talk.date | date: "%Y-%m-%d" %}{% if d >= today %}{% assign any_upcoming = true %}{% endif %}{% endfor %}
+{% if any_upcoming %}
+<h2>Upcoming</h2>
+{% for talk in talks %}{% assign d = talk.date | date: "%Y-%m-%d" %}{% if d >= today %}
 <article>
   <h3><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h3>
   {% include talk-meta.html talk=talk %}
   {{ talk.content }}
 </article>
 {% endif %}{% endfor %}
-{% unless any_upcoming %}<p>No talks scheduled yet. Check back soon, or <a href="mailto:msgss@dal.ca">volunteer to speak</a>!</p>{% endunless %}
+{% endif %}
 
 <h2>Past talks</h2>
 {% assign past = talks | reverse %}{% assign year = "" %}

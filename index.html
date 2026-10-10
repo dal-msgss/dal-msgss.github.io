@@ -6,8 +6,20 @@ full_title: "MSGSS · Dalhousie Mathematics & Statistics Graduate Society"
 <h1>Dalhousie Mathematics &amp; Statistics Graduate Society</h1>
 <p>The Mathematics &amp; Statistics Graduate Society (MSGSS) is the DSU society for all MSc and PhD students in mathematics and statistics at Dalhousie University. We run the weekly graduate seminar, organize social events throughout the year, and advocate for graduate students in the department.</p>
 
+{% comment %} Upcoming events and seminar talks; hidden when there are none. {% endcomment %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign items = site.events | concat: site.talks | sort: "date" %}
+{% assign any_upcoming = false %}
+{% for item in items %}{% assign d = item.date | date: "%Y-%m-%d" %}{% if d >= today %}{% assign any_upcoming = true %}{% endif %}{% endfor %}
+{% if any_upcoming %}
+<h2>Coming up</h2>
+<ul class="talk-list">
+{% for item in items %}{% assign d = item.date | date: "%Y-%m-%d" %}{% if d >= today %}  <li>{% if item.collection == "talks" %}<span class="kind">Grad seminar:</span> {% endif %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a><br><span class="meta">{{ item.date | date: "%A, %B %-d" }}{% if item.collection == "talks" %} &middot; {{ item.speaker }}{% else %}{% if item.time %} &middot; {{ item.time }}{% endif %}{% if item.location %} &middot; {{ item.location }}{% endif %}{% endif %}</span></li>
+{% endif %}{% endfor %}</ul>
+{% endif %}
+
 <h2>Events</h2>
-<p>We organize the following throughout the academic year:</p>
+<p>We organize the following throughout the academic year (see all <a href="{{ '/events/' | relative_url }}">events</a>):</p>
 <ul>
   <li><b><a href="{{ '/seminar/' | relative_url }}">Grad seminar</a>:</b> a weekly seminar where graduate students share their research in an informal, friendly setting. Everyone is welcome to come listen, and new speakers are always encouraged.</li>
   <li><b>Writing days:</b> co-working sessions on campus or at a nearby café, offering dedicated time to make progress on theses, papers, and coursework alongside peers.</li>
