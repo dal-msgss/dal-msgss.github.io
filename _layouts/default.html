@@ -25,11 +25,19 @@
     <header class="site-header">
       <a class="site-name" href="{{ '/' | relative_url }}"><img src="{{ '/images/logo.png' | relative_url }}" alt="" width="56" height="56">MSGSS</a>
       <nav>
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/seminar/' | relative_url }}"{% if page.url contains '/seminar/' %} aria-current="page"{% endif %}>Seminar</a>
-        <a href="{{ '/travel-grant.html' | relative_url }}"{% if page.url == '/travel-grant.html' %} aria-current="page"{% endif %}>Travel Grant</a>
-        <a href="{{ '/executive.html' | relative_url }}"{% if page.url == '/executive.html' %} aria-current="page"{% endif %}>Executive</a>
-        <a href="{{ '/docs/' | relative_url }}"{% if page.url contains '/docs/' %} aria-current="page"{% endif %}>Documents</a>
+{%- comment %} Links come from _data/navigation.yml. {% endcomment %}
+{%- for item in site.data.navigation %}
+  {%- assign current = false %}
+  {%- assign last = item.url | slice: -1, 1 %}
+  {%- if item.url == "/" %}
+    {%- if page.url == "/" or page.url == "/index.html" %}{% assign current = true %}{% endif %}
+  {%- elsif last == "/" %}
+    {%- assign n = item.url | size %}{% assign prefix = page.url | slice: 0, n %}
+    {%- if prefix == item.url %}{% assign current = true %}{% endif %}
+  {%- elsif page.url == item.url %}{% assign current = true %}
+  {%- endif %}
+        <a href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a>
+{%- endfor %}
       </nav>
     </header>
 
@@ -38,9 +46,9 @@
     </main>
 
     <footer class="site-footer">
-      <a href="mailto:msgss@dal.ca">msgss@dal.ca</a> ·
-      <a href="https://www.instagram.com/msgss.dal">Instagram</a> ·
-      <a href="https://github.com/msgss-dal">GitHub</a>
+      <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a> ·
+      <a href="{{ site.data.society.instagram }}">Instagram</a> ·
+      <a href="{{ site.data.society.github }}">GitHub</a>
     </footer>
   </body>
 </html>

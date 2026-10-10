@@ -8,7 +8,7 @@ GitHub Pages rebuilds the site within a few minutes.
       least two owners at all times, ideally including an account tied to msgss@dal.ca,
       so access never leaves with a graduating student.
 - [ ] Add the new year's file to `_executive/` (see "Executive page" below).
-- [ ] Update the seminar room and time at the top of `seminar/index.html`.
+- [ ] Update the seminar room and time in `_data/society.yml`.
 - [ ] If the bylaws or constitution were amended, replace `docs/bylaws.pdf` and
       `docs/constitution.pdf` (keep those file names so links don't break) and
       update the "Last amended" line in `docs/index.md`.
@@ -18,6 +18,9 @@ GitHub Pages rebuilds the site within a few minutes.
 
 - `index.md`, `docs/index.md`, `travel-grant.md`: page text, in Markdown.
 - `seminar/index.html`, `executive.html`: pages built from `_talks/` and `_executive/`.
+- `_data/society.yml`: contact email, social links, and seminar room and time.
+- `_data/roles.yml`: council roles and their descriptions.
+- `_data/navigation.yml`: the links in the navigation bar.
 - `_layouts/default.html`: the shared header, navigation and footer for every page.
 - `_drafts/`: Markdown pages that are not published yet.
 - `style.css`: all styling. `images/`: logo and icons.
@@ -35,9 +38,10 @@ date: 2026-10-15
 The abstract, in Markdown. Leave a blank line between paragraphs.
 ```
 
-Seminar details (room, time, contact, blurb) are written directly in `seminar/index.html`.
+The seminar room and time are in `_data/society.yml`; the blurb is in `seminar/index.html`.
 
-The seminar page lists every talk, newest first, grouped by year.
+The seminar page lists every talk, newest first, grouped by academic year
+(July to June, labelled like 2025/26).
 
 ## Executive page
 
@@ -57,8 +61,13 @@ MSc Statistics: Vacant
 ```
 
 The newest year is shown as the current executive; older years are listed under
-"Past executives". The role descriptions and layout are in `executive.html`.
-A role left out of a year's file shows as "Vacant".
+"Past executives". Each name before the colon must match a role's `key` in
+`_data/roles.yml`. In the current year, a role left out of the file shows as
+"Vacant"; in past years it is simply not listed.
+
+Role names, descriptions and order are in `_data/roles.yml`. To rename a role,
+change its `title` there and leave its `key` alone. To add a role, add an entry
+there and a line for it in the current year's file.
 
 ## Markdown pages
 
@@ -78,8 +87,8 @@ Normal Markdown from here on.
 
 The `title` shows in the browser tab. You can also add a `description:` line; it's the
 summary shown in search results and link previews (otherwise the site's description
-from `_config.yml` is used). To add the page to the nav bar, add a
-link in `_layouts/default.html`.
+from `_config.yml` is used). To add the page to the nav bar, add it
+to `_data/navigation.yml`.
 
 Pages in `_drafts/` (such as the welcome package) are not published. To publish
 one, move it out of `_drafts/`.

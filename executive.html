@@ -3,46 +3,39 @@ layout: default
 title: Executive
 ---
 {% comment %}
-  Names come from the files in _executive/ (one per year).
-  The newest year is shown as the current executive.
+  Names come from the files in _executive/ (one per year); the newest year is
+  shown as the current executive. Role names and descriptions come from
+  _data/roles.yml.
 {% endcomment %}
 {% assign terms = site.executive | sort: "year" | reverse %}
 {% assign c = terms.first %}
+{% assign roles = site.data.roles %}
+{% assign all_roles = roles.officers | concat: roles.representatives.roles %}
 <h1>Executive</h1>
-<p>The society is run by a council of seven graduate students, elected at the Annual General Meeting. Roles are set out in the <a href="{{ '/docs/' | relative_url }}">constitution and bylaws</a>.</p>
+<p>The society is run by a council of {{ all_roles.size }} graduate students, elected at the Annual General Meeting. Roles are set out in the <a href="{{ '/docs/' | relative_url }}">constitution and bylaws</a>.</p>
 
 <h2>Current executive ({{ c.year }})</h2>
-
-<h3>President <span class="holder">· {{ c["President"] | default: "Vacant" }}</span></h3>
-<p>Leads the society and chairs council and executive meetings. Acts as the society's main spokesperson, advocates for graduate students with the department and on the Lett Bursary Committee, and sets the society's long-term direction.</p>
-
-<h3>Vice-President External <span class="holder">· {{ c["Vice-President External"] | default: "Vacant" }}</span></h3>
-<p>Oversees the society's events and communications. Chairs the Student Events Committee, manages emails, newsletters and promotion, and works with the President as a liaison to outside organizations.</p>
-
-<h3>Vice-President Internal <span class="holder">· {{ c["Vice-President Internal"] | default: "Vacant" }}</span></h3>
-<p>Manages the society's finances, budget and DSU audit, and chairs the Finance Committee. Takes meeting minutes, maintains the bylaws, acts as the official student advocate on academic and disciplinary appeals, and is the society's liaison with the department administration.</p>
-
-<h3>Program Representatives</h3>
-<p>Each graduate program has one representative, who represents the students in that program on council, serves as a liaison between council and students, and helps plan the graduate seminar.</p>
+{% for role in roles.officers %}
+<h3>{{ role.title }} <span class="holder">· {{ c[role.key] | default: "Vacant" }}</span></h3>
+{{ role.description | markdownify }}
+{% endfor %}
+<h3>{{ roles.representatives.title }}</h3>
+{{ roles.representatives.description | markdownify }}
 <ul>
-  <li>PhD Mathematics: {{ c["PhD Mathematics"] | default: "Vacant" }}</li>
-  <li>PhD Statistics: {{ c["PhD Statistics"] | default: "Vacant" }}</li>
-  <li>MSc Mathematics: {{ c["MSc Mathematics"] | default: "Vacant" }}</li>
-  <li>MSc Statistics: {{ c["MSc Statistics"] | default: "Vacant" }}</li>
+{%- for role in roles.representatives.roles %}
+  <li>{{ role.title }}: {{ c[role.key] | default: "Vacant" }}</li>
+{%- endfor %}
 </ul>
 
+{% comment %} Past years list only the roles named in that year's file. {% endcomment %}
 {% if terms.size > 1 %}
 <h2>Past executives</h2>
 {% for t in terms offset: 1 %}
 <h3>{{ t.year }}</h3>
 <ul>
-  <li>President: {{ t["President"] | default: "Vacant" }}</li>
-  <li>VP External: {{ t["Vice-President External"] | default: "Vacant" }}</li>
-  <li>VP Internal: {{ t["Vice-President Internal"] | default: "Vacant" }}</li>
-  <li>PhD Math Representative: {{ t["PhD Mathematics"] | default: "Vacant" }}</li>
-  <li>PhD Stat Representative: {{ t["PhD Statistics"] | default: "Vacant" }}</li>
-  <li>MSc Math Representative: {{ t["MSc Mathematics"] | default: "Vacant" }}</li>
-  <li>MSc Stat Representative: {{ t["MSc Statistics"] | default: "Vacant" }}</li>
+{%- for role in all_roles %}{% if t[role.key] %}
+  <li>{{ role.short | default: role.title }}: {{ t[role.key] }}</li>
+{%- endif %}{% endfor %}
 </ul>
 {% endfor %}
 {% endif %}

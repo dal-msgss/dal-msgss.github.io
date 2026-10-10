@@ -4,16 +4,29 @@ title: Seminar
 full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 ---
 {% assign talks = site.talks | sort: "date" | reverse %}
+{% assign seminar = site.data.society.seminar %}
 <h1>Dalhousie Mathematics &amp; Statistics Graduate Seminar</h1>
 <p>Our weekly grad seminar is a chance for graduate students to share their research in an informal, friendly setting. Everyone is welcome to come listen, and new speakers are always encouraged.</p>
-<p><b>Location:</b> Chase Building, Room 227<br>
-<b>Time:</b> Thursdays, 4:00-5:00 PM<br>
-<b>Want to give a presentation?</b> Email <a href="mailto:msgss@dal.ca">msgss@dal.ca</a></p>
+<p><b>Location:</b> {{ seminar.room }}<br>
+<b>Time:</b> {{ seminar.time }}<br>
+<b>Want to give a presentation?</b> Email <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a></p>
 
-{% comment %} All talks, newest first, grouped by year. {% endcomment %}
-{% assign year = "" %}
-{% for talk in talks %}{% assign y = talk.date | date: "%Y" %}{% if y != year %}{% unless year == "" %}</ul>{% endunless %}{% assign year = y %}
-<h2>{{ year }}</h2>
+{% comment %}
+  All talks, newest first, grouped by academic year (July to June),
+  labelled like "2025/26" to match the Executive page.
+{% endcomment %}
+{% assign current = "" %}
+{% for talk in talks %}
+  {%- assign start = talk.date | date: "%Y" | plus: 0 -%}
+  {%- assign month = talk.date | date: "%-m" | plus: 0 -%}
+  {%- if month < 7 %}{% assign start = start | minus: 1 %}{% endif -%}
+  {%- assign end = start | plus: 1 | modulo: 100 -%}
+  {%- if end < 10 %}{% assign end = end | prepend: "0" %}{% endif -%}
+  {%- capture label %}{{ start }}/{{ end }}{% endcapture -%}
+  {%- if label != current %}{% unless current == "" %}
+</ul>{% endunless %}{% assign current = label %}
+<h2>{{ label }}</h2>
 <ul class="talk-list">{% endif %}
-  <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a><br><span class="meta">{{ talk.date | date: "%B %-d" }} &middot; {{ talk.speaker }}</span></li>{% endfor %}
-{% unless year == "" %}</ul>{% endunless %}
+  <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a><br><span class="meta">{{ talk.date | date: "%B %-d" }} &middot; {{ talk.speaker }}</span></li>
+{%- endfor %}
+{% unless current == "" %}</ul>{% endunless %}

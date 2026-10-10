@@ -1,0 +1,56 @@
+# Council roles, in the order they appear on the Executive page.
+#
+#   key:         the name used in the _executive/ files. Don't change it for an
+#                existing role, or older years will stop matching.
+#   title:       the name shown on the site. Safe to change at any time.
+#   short:       shorter label used in the "Past executives" lists (optional).
+#   description: what the role does, in Markdown.
+#
+# To add a role, add an entry here and a line with its key to the current
+# year's file in _executive/. Past years that don't list it are unaffected.
+
+officers:
+  - key: President
+    title: President
+    description: >-
+      Leads the society and chairs council and executive meetings. Acts as the
+      society's main spokesperson, advocates for graduate students with the
+      department and on the Lett Bursary Committee, and sets the society's
+      long-term direction.
+
+  - key: Vice-President External
+    title: Vice-President External
+    short: VP External
+    description: >-
+      Oversees the society's events and communications. Chairs the Student
+      Events Committee, manages emails, newsletters and promotion, and works
+      with the President as a liaison to outside organizations.
+
+  - key: Vice-President Internal
+    title: Vice-President Internal
+    short: VP Internal
+    description: >-
+      Manages the society's finances, budget and DSU audit, and chairs the
+      Finance Committee. Takes meeting minutes, maintains the bylaws, acts as
+      the official student advocate on academic and disciplinary appeals, and
+      is the society's liaison with the department administration.
+
+representatives:
+  title: Program Representatives
+  description: >-
+    Each graduate program has one representative, who represents the students
+    in that program on council, serves as a liaison between council and
+    students, and helps plan the graduate seminar.
+  roles:
+    - key: PhD Mathematics
+      title: PhD Mathematics
+      short: PhD Math Representative
+    - key: PhD Statistics
+      title: PhD Statistics
+      short: PhD Stat Representative
+    - key: MSc Mathematics
+      title: MSc Mathematics
+      short: MSc Math Representative
+    - key: MSc Statistics
+      title: MSc Statistics
+      short: MSc Stat Representative

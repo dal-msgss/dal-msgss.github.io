@@ -1,0 +1,11 @@
+# Contact details and seminar logistics, used across the site.
+# Change a value here and it updates everywhere it appears.
+
+email: msgss@dal.ca
+instagram: https://www.instagram.com/msgss.dal
+github: https://github.com/msgss-dal
+
+# Shown at the top of the seminar page. Update at the start of each year.
+seminar:
+  room: Chase Building, Room 227
+  time: Thursdays, 4:00-5:00 PM

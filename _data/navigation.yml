@@ -1,0 +1,13 @@
+# Links in the navigation bar, in order.
+# A url ending in "/" (like /seminar/) also highlights for every page inside it.
+
+- title: Home
+  url: /
+- title: Seminar
+  url: /seminar/
+- title: Travel Grant
+  url: /travel-grant.html
+- title: Executive
+  url: /executive.html
+- title: Documents
+  url: /docs/
