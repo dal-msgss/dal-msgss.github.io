@@ -63,7 +63,7 @@ def page(title, body, root):
       <nav>
         <a href="{root}index.html">Home</a>
         <a href="{root}seminar/">Seminar</a>
-        <a href="{root}travel-grant.html">Travel Grant</a>
+        <a href="{root}executive.html">Executive</a>
         <a href="{root}docs/">Documents</a>
       </nav>
     </header>
