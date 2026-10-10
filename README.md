@@ -20,29 +20,11 @@ The abstract, in Markdown. Leave a blank line between paragraphs.
 
 Seminar details (room, time, contact, blurb) are written directly in `seminar/index.html`.
 
-Push to `main` and GitHub Pages rebuilds the site. The seminar, events and home pages split items into upcoming and past using the build date; `.github/workflows/daily-rebuild.yml` triggers a rebuild every night
+Push to `main` and GitHub Pages rebuilds the site. The seminar page splits talks into upcoming and past using the build date; `.github/workflows/daily-rebuild.yml` triggers a rebuild every night
 so they stay current.
 
 To preview locally: `bundle exec jekyll serve` (with the `github-pages` gem).
 
-
-## Events
-
-Each event is one Markdown file in `_events/`, named `YYYY-MM-DD-event-name.md`:
-
-```markdown
----
-title: Board Game Night
-date: 2026-11-06
-time: 6:00 PM            # optional
-location: Chase 319      # optional
----
-A description of the event, in Markdown.
-```
-
-Events get their own page and are listed on `/events/` under "Upcoming" and
-"Past events". The home page shows a "Coming up" list of upcoming events and
-seminar talks together. Any of these sections is hidden when it has nothing in it.
 
 ## Executive page
 

@@ -16,7 +16,6 @@
       <nav>
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/seminar/' | relative_url }}"{% if page.url contains '/seminar/' %} aria-current="page"{% endif %}>Seminar</a>
-        <a href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a>
         <a href="{{ '/travel-grant.html' | relative_url }}"{% if page.url == '/travel-grant.html' %} aria-current="page"{% endif %}>Travel Grant</a>
         <a href="{{ '/executive.html' | relative_url }}"{% if page.url == '/executive.html' %} aria-current="page"{% endif %}>Executive</a>
         <a href="{{ '/docs/' | relative_url }}"{% if page.url contains '/docs/' %} aria-current="page"{% endif %}>Documents</a>

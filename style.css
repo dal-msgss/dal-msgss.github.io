@@ -118,4 +118,3 @@ img { max-width: 100%; height: auto; }
 table { border-collapse: collapse; margin: 1rem 0; }
 th, td { border-bottom: 1px solid var(--beige); padding: 0.4rem 0.8rem; text-align: left; }
 th { color: var(--olive); }
-.talk-list .kind { color: var(--olive); font-weight: 600; }
