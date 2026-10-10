@@ -1,5 +1,8 @@
 # Jekyll settings for the MSGSS site (GitHub Pages builds the site from these).
 title: MSGSS
+# Used in search results and link previews.
+description: "The Mathematics and Statistics Graduate Students’ Society at Dalhousie University: the weekly grad seminar, social events, and advocacy for MSc and PhD students in mathematics and statistics."
+url: "https://msgss-dal.github.io"
 timezone: America/Halifax
 
 # Seminar talks: one Markdown file per talk in _talks/.

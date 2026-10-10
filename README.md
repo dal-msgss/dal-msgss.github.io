@@ -76,7 +76,9 @@ title: Welcome Package
 Normal Markdown from here on.
 ```
 
-The `title` shows in the browser tab. To add the page to the nav bar, add a
+The `title` shows in the browser tab. You can also add a `description:` line; it's the
+summary shown in search results and link previews (otherwise the site's description
+from `_config.yml` is used). To add the page to the nav bar, add a
 link in `_layouts/default.html`.
 
 Pages in `_drafts/` (such as the welcome package) are not published. To publish

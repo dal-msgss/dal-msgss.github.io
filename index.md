@@ -1,10 +1,10 @@
 ---
 title: Home
-full_title: "MSGSS · Dalhousie Mathematics & Statistics Graduate Society"
+full_title: "MSGSS · Dalhousie Mathematics and Statistics Graduate Students’ Society"
 ---
-# Dalhousie Mathematics & Statistics Graduate Society
+# Dalhousie Mathematics and Statistics Graduate Students’ Society
 
-The Mathematics & Statistics Graduate Society (MSGSS) is the DSU society for all MSc and PhD students in mathematics and statistics at Dalhousie University. We run the weekly graduate seminar, organize social events throughout the year, and advocate for graduate students in the department.
+The Mathematics and Statistics Graduate Students’ Society (MSGSS) is the DSU society for all MSc and PhD students in mathematics and statistics at Dalhousie University. We run the weekly graduate seminar, organize social events throughout the year, and advocate for graduate students in the department.
 
 ## Events
 
