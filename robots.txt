@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://msgss-dal.github.io/sitemap.xml
+Sitemap: https://dal-msgss.github.io/sitemap.xml

@@ -19,6 +19,6 @@ We organize the following throughout the academic year:
 
 - **Email:** [{{ site.data.society.email }}](mailto:{{ site.data.society.email }})
 - **Instagram:** [@msgss.dal]({{ site.data.society.instagram }})
-- **GitHub:** [msgss-dal]({{ site.data.society.github }})
+- **GitHub:** [dal-msgss]({{ site.data.society.github }})
 
 Meet the society's [executive team](executive.html).
