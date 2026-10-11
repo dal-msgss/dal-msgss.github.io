@@ -1,10 +1,10 @@
-# msgss-dal.github.io
+# dal-msgss.github.io
 Website for the society, built by GitHub Pages with Jekyll. Push to `main` and
 GitHub Pages rebuilds the site within a few minutes.
 
 ## Handover checklist (after each AGM)
 
-- [ ] Give the new council access to the `msgss-dal` GitHub organization. Keep at
+- [ ] Give the new council access to the `dal-msgss` GitHub organization. Keep at
       least two owners at all times, ideally including an account tied to msgss@dal.ca,
       so access never leaves with a graduating student.
 - [ ] Add the new year's file to `_executive/` (see "Executive page" below).
