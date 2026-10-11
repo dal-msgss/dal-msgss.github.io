@@ -8,6 +8,6 @@ MSGSS ran a pilot travel grant in Summer 2026, which supported 2 students with $
 
 ## Other travel funding
 
-- **[FGS Travel Grant](https://www.dal.ca/faculty/gradstudies/finance-your-studies/scholarships-bursaries/travel-grant.html):**
-- **[AARMS Travel Support](https://www.aarms.math.ca/programs/travel-support):**
-- **[DSU Member Grant](https://www.dsu.ca/grants-bursaries):**
+- **[FGS Travel Grant](https://www.dal.ca/faculty/gradstudies/finance-your-studies/scholarships-bursaries/travel-grant.html)**
+- **[AARMS Travel Support](https://www.aarms.math.ca/programs/travel-support)**
+- **[DSU Member Grant](https://www.dsu.ca/grants-bursaries)**
