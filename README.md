@@ -2,15 +2,43 @@
 Website for the society, built by GitHub Pages with Jekyll. Push to `main` and
 GitHub Pages rebuilds the site within a few minutes.
 
+## Quick edit links
+
+You can update the site from your browser on GitHub, without installing anything.
+Each link opens GitHub's editor. Make your changes, then click **Commit changes**
+(committing straight to `main` is fine). The site updates within a few minutes.
+
+**Seminar**
+- [Add a talk](https://github.com/dal-msgss/dal-msgss.github.io/new/main/_talks?filename=YYYY-MM-DD-firstname-lastname.md&value=---%0Atitle%3A%20TBA%0Aspeaker%3A%20Firstname%20Lastname%0Adate%3A%20YYYY-MM-DD%0A---%0AAbstract%20goes%20here.%20Leave%20a%20blank%20line%20between%20paragraphs.%0A): opens a new talk with the template filled in.
+  Replace every placeholder: the file name (`YYYY-MM-DD-firstname-lastname.md`,
+  lowercase with hyphens), the date, the speaker and the abstract. Leave the title
+  as `TBA` if you don't know it yet.
+- [Edit a talk](https://github.com/dal-msgss/dal-msgss.github.io/tree/main/_talks): click the talk's file, then the
+  pencil icon.
+- [Change the seminar room or time](https://github.com/dal-msgss/dal-msgss.github.io/edit/main/_data/society.yml)
+
+**Executive**
+- [Add a new year's executive](https://github.com/dal-msgss/dal-msgss.github.io/new/main/_executive?filename=YYYY-YY.md&value=---%0Ayear%3A%20%22YYYY/YY%22%0APresident%3A%20%0AVice-President%20External%3A%20%0AVice-President%20Internal%3A%20%0APhD%20Mathematics%3A%20%0APhD%20Statistics%3A%20%0AMSc%20Mathematics%3A%20%0AMSc%20Statistics%3A%20%0A---%0A): use it after each AGM. Replace
+  `YYYY/YY` and the file name with the new academic year (for example `2027/28` and
+  `2027-28.md`), then type each name after the colon. Leave a role blank if it's
+  vacant.
+- [Edit an executive year](https://github.com/dal-msgss/dal-msgss.github.io/tree/main/_executive): to fix a name or fill
+  a vacancy, click that year's file, then the pencil icon.
+
+If you commit a typo, GitHub emails the person who committed and the live site
+keeps its previous version. Open the file again, fix it and commit.
+
 ## Handover checklist (after each AGM)
 
 - [ ] Give the new council access to the `dal-msgss` GitHub organization. Keep at
       least two owners at all times, ideally including an account tied to msgss@dal.ca,
       so access never leaves with a graduating student.
-- [ ] Add the new year's file to `_executive/` (see "Executive page" below).
+- [ ] Add the new year's file to `_executive/` (use the "Add a new year's executive"
+      link above, or see "Executive page" below).
 - [ ] Update the seminar room and time in `_data/society.yml`.
 - [ ] If the bylaws or constitution were amended, replace `docs/bylaws.pdf` and
       `docs/constitution.pdf` (keep those file names so links don't break).
+- [ ] Show the new council the "Quick edit links" above.
 - [ ] Make sure this checklist is in the society's transition notes for next year.
 
 ## Where things are
