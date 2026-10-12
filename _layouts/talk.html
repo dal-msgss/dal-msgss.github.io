@@ -5,6 +5,6 @@ layout: default
 {%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
 <p><a href="{{ '/seminar/' | relative_url }}">&larr; Back to the seminar</a></p>
 <h1>{% include talk-title.html talk=page %}</h1>
-<p class="meta">{{ page.speaker }} &middot; {{ page.date | date: "%B %-d, %Y" }}</p>
+<p class="meta">{{ page.speaker }} &middot; {{ page.date | date: "%A, %B %-d, %Y" }}</p>
 {% comment %} A missing abstract shows "Abstract TBA." only until the talk has happened. {% endcomment %}
 {% assign body = content | strip %}{% if body != "" %}{{ content }}{% elsif when >= today %}<p><i>Abstract TBA.</i></p>{% endif %}
