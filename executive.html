@@ -16,26 +16,25 @@ title: Executive
 
 <h2>Current executive ({{ c.year }})</h2>
 {% for role in roles.officers %}
-<h3>{{ role.title }} <span class="holder">· {{ c[role.key] | default: "Vacant" }}</span></h3>
+<h3>{{ role.title }} <span class="holder">· {{ c[role.key] }}</span></h3>
 {{ role.description | markdownify }}
 {% endfor %}
 <h3>{{ roles.representatives.title }}</h3>
 {{ roles.representatives.description | markdownify }}
 <ul>
 {%- for role in roles.representatives.roles %}
-  <li>{{ role.title }}: {{ c[role.key] | default: "Vacant" }}</li>
+  <li>{{ role.title }}: {{ c[role.key] }}</li>
 {%- endfor %}
 </ul>
 
-{% comment %} Past years list only the roles named in that year's file. {% endcomment %}
 {% if terms.size > 1 %}
 <h2>Past executives</h2>
 {% for t in terms offset: 1 %}
 <h3>{{ t.year }}</h3>
 <ul>
-{%- for role in all_roles %}{% if t[role.key] %}
+{%- for role in all_roles %}
   <li>{{ role.short | default: role.title }}: {{ t[role.key] }}</li>
-{%- endif %}{% endfor %}
+{%- endfor %}
 </ul>
 {% endfor %}
 {% endif %}

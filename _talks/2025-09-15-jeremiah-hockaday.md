@@ -1,5 +1,5 @@
 ---
 speaker: Jeremiah Hockaday
-title: TBA
+title: Talk by Jeremiah Hockaday
 date: 2025-09-15
 ---

@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% if page.speaker %}{% capture page_title %}{% include talk-title.html talk=page %}{% endcapture %}{% else %}{% assign page_title = page.title %}{% endif %}
-    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{{ page_title }} · MSGSS{% endif %}</title>
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{{ page.title }} · MSGSS{% endif %}</title>
 {% if page.description %}{% assign desc = page.description %}{% elsif page.speaker %}{% capture desc %}Grad seminar talk by {{ page.speaker }}, {{ page.date | date: "%B %-d, %Y" }}.{% endcapture %}{% else %}{% assign desc = site.description %}{% endif %}
     <meta name="description" content="{{ desc | strip | escape }}">
     <meta property="og:site_name" content="MSGSS">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{% if page.full_title %}{{ page.full_title | escape }}{% else %}{{ page_title | escape }} · MSGSS{% endif %}">
+    <meta property="og:title" content="{% if page.full_title %}{{ page.full_title | escape }}{% else %}{{ page.title | escape }} · MSGSS{% endif %}">
     <meta property="og:description" content="{{ desc | strip | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ '/images/og-image.png' | absolute_url }}">

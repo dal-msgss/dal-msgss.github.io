@@ -27,6 +27,6 @@ full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 </ul>{% endunless %}{% assign current = label %}
 <h2>{{ label }}</h2>
 <ul class="talk-list">{% endif %}
-  <li><a href="{{ talk.url | relative_url }}">{% include talk-title.html talk=talk %}</a><br><span class="meta">{{ talk.date | date: "%A, %B %-d" }} &middot; {{ talk.speaker }}</span></li>
+  <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a><br><span class="meta">{{ talk.date | date: "%A, %B %-d" }} &middot; {{ talk.speaker }}</span></li>
 {%- endfor %}
 {% unless current == "" %}</ul>{% endunless %}
