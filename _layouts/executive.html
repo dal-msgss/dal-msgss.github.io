@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<p><a href="{{ '/executive.html' | relative_url }}">&larr; Back to the executive</a></p>
+<h1>Executive ({{ page.year }})</h1>
+{% assign roles = site.data.roles %}
+{% assign all_roles = roles.officers | concat: roles.representatives.roles %}
+<ul>
+{%- for role in all_roles %}
+  {%- if page[role.key] %}
+  <li>{{ role.short | default: role.title }}: {{ page[role.key] }}</li>
+  {%- endif %}
+{%- endfor %}
+</ul>
+{{ content }}

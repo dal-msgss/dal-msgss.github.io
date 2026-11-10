@@ -10,9 +10,10 @@ collections:
   talks:
     output: true
     permalink: /seminar/talks/:name.html
-  # Executive: one file per year in _executive/ (not published as pages).
+  # Executive: one file per year, with a roster page linked from the archive.
   executive:
-    output: false
+    output: true
+    permalink: /executive/:name.html
 
 # Publish talks even when their date is in the future (upcoming talks).
 future: true
@@ -30,6 +31,12 @@ defaults:
       type: talks
     values:
       layout: talk
+  - scope:
+      path: ""
+      type: executive
+    values:
+      layout: executive
+      title: Executive
 
 # Builds /sitemap.xml so search engines find every page and talk.
 plugins:

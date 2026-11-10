@@ -5,4 +5,5 @@ title: Documents
 
 - [Constitution](constitution.pdf)
 - [Bylaws](bylaws.pdf)
-- [Website Information](website.html)
+- [Maintainin](website.html)[g this website](website.html)
+- [New executive? Start here](instructions.html)
