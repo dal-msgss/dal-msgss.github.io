@@ -6,13 +6,13 @@ full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 {% assign talks = site.talks | sort: "date" | reverse %}
 {% assign seminar = site.data.society.seminar %}
 <h1>Dalhousie Mathematics &amp; Statistics Graduate Seminar</h1>
-<p>Our weekly grad seminar is a chance for graduate students to share their research in an informal, friendly setting. Everyone is welcome to come listen, and new speakers are always encouraged.</p>
+<p>Our weekly grad seminar is a chance for graduate students to share their research or other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at [{{ site.data.society.email }}](mailto:{{ site.data.society.email }}).</p>
 <p><b>Location:</b> {{ seminar.room }}<br>
 <b>Time:</b> {{ seminar.time }}<br>
-<b>Want to give a presentation?</b> Email <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a></p>
+<b>Contact:</b> <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a></p>
 
 {% comment %}
-  All talks, newest first, grouped by academic year (July to June), labelled like "2025/26" to match the Executive page.
+  The seminar has run in a weekly format since Fall 2024.
 {% endcomment %}
 {% assign current = "" %}
 {% for talk in talks %}
