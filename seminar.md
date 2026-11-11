@@ -1,20 +1,18 @@
 ---
-layout: default
 title: Seminar
 full_title: Dalhousie Mathematics & Statistics Graduate Seminar
 permalink: /seminar/
 ---
 {% assign talks = site.talks | sort: "date" | reverse %}
-{% assign seminar = site.data.society.seminar %}
-<h1>Dalhousie Mathematics &amp; Statistics Graduate Seminar</h1>
-<p>Our weekly grad seminar is a chance for graduate students to share their research or other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a>.</p>
-<p><b>Location:</b> {{ seminar.room }}<br>
-<b>Time:</b> {{ seminar.time }}<br>
-<b>Contact:</b> <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a></p>
 
-{% comment %}
-  The seminar has run in a weekly format since Fall 2024.
-{% endcomment %}
+# Dalhousie Mathematics & Statistics Graduate Seminar
+
+Our weekly grad seminar is a chance for graduate students to share their research or other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at [msgss@dal.ca](mailto:msgss@dal.ca).
+
+**Location:** Chase Building, Room 227<br>
+**Time:** Thursdays, 4:00-5:00 PM<br>
+**Contact:** [msgss@dal.ca](mailto:msgss@dal.ca)
+
 {% assign current = "" %}
 {% for talk in talks %}
   {%- assign start = talk.date | date: "%Y" | plus: 0 -%}

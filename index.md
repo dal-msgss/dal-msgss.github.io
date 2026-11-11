@@ -10,7 +10,7 @@ The Mathematics and Statistics Graduate Student Society (MSGSS) is the DSU socie
 
 Meet the society 2026/27 [executive team](executive.html)! Here are some things we have planned for this year:
 
-- **[Grad seminar](seminar/):** a weekly seminar where graduate students can share their research or any other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at [{{ site.data.society.email }}](mailto:{{ site.data.society.email }}).
+- **[Grad seminar](seminar/):** a weekly seminar where graduate students can share their research or any other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at [msgss@dal.ca](mailto:msgss@dal.ca).
 - **Writing days:** weekly co-working sessions at Chase 319 or at a nearby café.
 - **Board game nights:** monthly social evenings that bring together students from across the department.
 - **Career day:** an event with invited Dalhousie alumni and former postdocs now working in academia and industry, to help current students to plan for life after graduation. (Planned for Winter 2027.)

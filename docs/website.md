@@ -12,16 +12,15 @@ You need to be a member of the [`dal-msgss`](https://github.com/dal-msgss) GitHu
 Each link opens GitHub's editor in the browser. Make your changes, then click **Commit changes**, add a title and description for your edit, and commit directly to the `main` branch. The site updates within a few minutes.
 
 * [Add a talk to the grad seminar.](<https://github.com/dal-msgss/dal-msgss.github.io/new/main/_talks?filename=YYYY-MM-DD-firstname-lastname.md&value=---%0Atitle%3A%20Talk%20Title%0Aspeaker%3A%20Firstname%20Lastname%0Adate%3A%20YYYY-MM-DD%0A---%0AAbstract%20goes%20here.%20Leave%20a%20blank%20line%20between%20paragraphs.%0A>)
-* [Update the grad seminar information.](https://github.com/dal-msgss/dal-msgss.github.io/edit/main/_data/society.yml)
-* [Update the executive team.](<https://github.com/dal-msgss/dal-msgss.github.io/new/main/_executive?filename=YYYY-YY.md&value=---%0Ayear%3A%20%22YYYY/YY%22%0APresident%3A%20%0AVice-President%20External%3A%20%0AVice-President%20Internal%3A%20%0APhD%20Mathematics%3A%20%0APhD%20Statistics%3A%20%0AMSc%20Mathematics%3A%20%0AMSc%20Statistics%3A%20%0A---%0A>)
+* [Update the grad seminar information.](https://github.com/dal-msgss/dal-msgss.github.io/edit/main/seminar.md)
+* [Add a new executive team.](<https://github.com/dal-msgss/dal-msgss.github.io/new/main/_executive?filename=YYYY-YY.md&value=---%0Ayear%3A%20%22YYYY/YY%22%0A---%0A-%20President%3A%20%0A-%20VP%20External%3A%20%0A-%20VP%20Internal%3A%20%0A-%20PhD%20Math%20Representative%3A%20%0A-%20PhD%20Stat%20Representative%3A%20%0A-%20MSc%20Math%20Representative%3A%20%0A-%20MSc%20Stat%20Representative%3A%20%0A>)
 
 #### File guide
 
 - `index.md`, `docs/index.md`, `travel-grant.md`: page text, in Markdown.
-- `seminar.html`, `executive.html`: pages built from `_talks/` and `_executive/`.
-- `_data/society.yml`: contact email, social links, and seminar room and time.
-- `_data/roles.yml`: council roles and their descriptions.
+- `seminar.md`: the seminar page, with the talk list built from `_talks/`.
+- `executive.md`: the executive page, including the role descriptions. It shows the newest file in `_executive/` as the current executive and links to the older years.
+- `_executive/`: one Markdown file per year, listing that year's executive.
 - `_data/navigation.yml`: the links in the navigation bar.
 - `_layouts/default.html`: the shared header, navigation and footer for every page.
-- `_drafts/`: Markdown pages that are not published yet.
 - `style.css`: all styling. `images/`: logo and icons.
