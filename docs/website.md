@@ -1,5 +1,5 @@
 ---
-title: Maintaing this website
+title: Maintaining this website
 ---
 # Maintaining this website
 
@@ -18,7 +18,7 @@ Each link opens GitHub's editor in the browser. Make your changes, then click **
 #### File guide
 
 - `index.md`, `docs/index.md`, `travel-grant.md`: page text, in Markdown.
-- `seminar/index.html`, `executive.html`: pages built from `_talks/` and `_executive/`.
+- `seminar.html`, `executive.html`: pages built from `_talks/` and `_executive/`.
 - `_data/society.yml`: contact email, social links, and seminar room and time.
 - `_data/roles.yml`: council roles and their descriptions.
 - `_data/navigation.yml`: the links in the navigation bar.

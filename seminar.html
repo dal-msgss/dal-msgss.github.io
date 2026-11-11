@@ -2,11 +2,12 @@
 layout: default
 title: Seminar
 full_title: Dalhousie Mathematics & Statistics Graduate Seminar
+permalink: /seminar/
 ---
 {% assign talks = site.talks | sort: "date" | reverse %}
 {% assign seminar = site.data.society.seminar %}
 <h1>Dalhousie Mathematics &amp; Statistics Graduate Seminar</h1>
-<p>Our weekly grad seminar is a chance for graduate students to share their research or other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at [{{ site.data.society.email }}](mailto:{{ site.data.society.email }}).</p>
+<p>Our weekly grad seminar is a chance for graduate students to share their research or other findings in an informal, friendly setting. If you want to give a talk or coordinate a workshop, reach out at <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a>.</p>
 <p><b>Location:</b> {{ seminar.room }}<br>
 <b>Time:</b> {{ seminar.time }}<br>
 <b>Contact:</b> <a href="mailto:{{ site.data.society.email }}">{{ site.data.society.email }}</a></p>
