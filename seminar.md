@@ -11,6 +11,7 @@ Our weekly grad seminar is a chance for graduate students to share their researc
 
 **Location:** Chase Building, Room 227<br>
 **Time:** Thursdays, 4:00-5:00 PM<br>
+**Room change:** The November 19 seminar is in Chase 319.<br>
 **Contact:** [msgss@dal.ca](mailto:msgss@dal.ca)
 
 {% assign current = "" %}
